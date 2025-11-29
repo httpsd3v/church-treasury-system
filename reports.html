@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Report</title>
+<link rel="stylesheet" href="reports.css">
+</head>
+<body>
+    <button onclick="window.location.href='index.html'">Go Back to Input Form</button>
+    <button onclick="clearReports()">Clear All Saved Data</button>
+    <h1>Saved Transaction Reports</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>Date/Time Recorded</th>
+            </tr>
+        </thead>
+        <tbody id="reportBody">
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2" style="text-align: right;">Grand Total Across All Reports:</td>
+                <td id="reportTotal" class="amount-cell">0.00/=</td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+
+<script src="main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Church System</title>
+</head>
+<link rel="stylesheet" href="index.css">
+<body>
+<div id="innerbody">
+<div id="inner1">
+    <div class="wrapper">
+        <input type="text" placeholder="Name" id="Name">
+        <input type="number" placeholder="Amount" id="Amount">
+        <select id="type-select" name="color">
+            <option value="">--Type--</option>
+            <option value="Thanksgiving Offerings">Thanksgiving Offerings</option>
+            <option value="Alms/Charitable Giving">Alms/Charitable Giving</option>
+            <option value="Offertory/Offerings">Offertory/Offerings</option>
+            <option value="First Fruits">First Fruits</option>
+            <option value="Pledge">Pledge</option>
+            <option value="Tithe">Tithe</option>
+        </select>
+        <button id="EnterBtn" onclick="addRow()">Add To Receipt</button>
+        <button id="SaveDataBtn" onclick="saveTransactionData()">Save Session Data</button>
+        <button id="ViewReportsBtn" onclick="window.location.href='reports.html'">View Saved Reports</button>
+    </div>
+    <a onclick="window.print()" href="#" id="print"> Print </a>
+</div>
+
+<div id="Receipt">
+    <div id="receiptinner">
+        <h2> CHURCH NAME </h2>
+        <h1> BRANCH NAME </h1>
+        <p id="Contacts"> Contacts <br> P.O.BOX 2361 00 21, Machakos.<br>
+            <div class="datetime">
+                <div class="clock">time: <span id="hrs">00</span><span>:</span><span id="min">00</span></div>
+                &nbsp;
+                <p>date:&nbsp; <p id="current-date"></p></p>
+            </div>
+        </p>
+
+        <table style="width:100%; border-collapse: collapse; margin-top: 20px;">
+            <thead>
+                <tr style="background-color: #f2f2f2;">
+                    <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Name</th>
+                    <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Type</th>
+                    <th style="border: 1px solid #ddd; padding: 8px; text-align: right;">Amount</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+            <tfoot id="tableFooter">
+                <tr style="font-weight: bold; background-color: #f2f2f2;">
+                    <td colspan="2" style="border: 1px solid #ddd; padding: 8px; text-align: right;">Total:</td>
+                    <td id="grandTotal" class="amount-cell" style="border: 1px solid #ddd; padding: 8px;">0.00/=</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+<script src="index.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+:root{
+    --default-font-size: 3em;
+    --default-font-size2: 1.1em;
+    --default-font-family: 'Poppins',monospace;
+}
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+#innerbody{
+    display: flex;
+    width: 99%;
+    height: 98%;
+    border: 5px solid black;
+}
+#inner1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 5px solid black;
+    width: 900px;
+    background: pink;
+}
+#Receipt{
+    display: flex;
+    border: 5px solid black;
+    width: 580px;
+}
+input{
+    height: 100px;
+    width: 600px;
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px black;
+    font-family: var(--default-font-family);
+    font-size: var(--default-font-size);
+    backdrop-filter: blur(3em);
+    background: rgb(218, 218, 218);
+}
+select{
+    height: 100px;
+    width: 600px;
+    margin-top: 20px;
+    box-shadow: 0 0 20px black;
+    border-radius: 15px;
+    font-family: var(--default-font-family);
+    font-size: var(--default-font-size);
+    background: rgb(218, 218, 218);
+}
+#EnterBtn, #SaveDataBtn, #ViewReportsBtn{
+    height: 100px;
+    width: 600px;
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px black;
+    font-family: var(--default-font-family);
+    font-size: var(--default-font-size);
+    backdrop-filter: blur(3em);
+    background: rgb(218, 218, 218);
+    cursor: pointer;
+}
+#EnterBtn:active, #SaveDataBtn:active, #ViewReportsBtn:active{
+    background: rgba(146, 62, 138, 0.555);
+}
+#EnterBtn:hover, #SaveDataBtn:hover, #ViewReportsBtn:hover{
+    background: rgb(230, 209, 228);
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+#Receipt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--default-font-family);
+    font-size: 1.2em;
+}
+#receiptinner{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 650px;
+    width: 450px;
+    border: 1px solid black;
+}
+#Contacts{
+    text-align: center;
+}
+#print{
+    height: 100px;
+    width: 600px;
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px black;
+    font-family: var(--default-font-family);
+    font-size: var(--default-font-size);
+    backdrop-filter: blur(3em);
+    background: rgb(218, 218, 218);
+    text-align: center;
+    text-decoration: none;
+    text-indent: 10px;
+    padding-top: 29px;
+    cursor: pointer;
+}
+table{
+    transform: translate(0px,10px);
+}
+table, th, td {
+    width: 400px;
+    border: 1px solid black;
+    font-family: var(--default-font-family);
+}
+th, td {
+    width: 100px;
+}
+@media print{
+#Receipt{
+    visibility: visible;    
+}
+.wrapper, #SaveDataBtn, #ViewReportsBtn {
+    display: none;
+}
+#inner1{
+    display: none;
+}
+}
+.datetime{
+    display: inline-flex;
+    text-align: left;
+    border: 1px solid white;
+}
+.amount-cell {
+    text-align: right;
+}
